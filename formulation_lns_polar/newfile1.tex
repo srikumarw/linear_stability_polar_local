@@ -1,0 +1,201 @@
+%% LyX 2.0.8.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{babel}
+\begin{document}
+\begin{equation}
+\phi(r,\theta,z,t)=h(z,\theta,t)-r
+\end{equation}
+
+
+\begin{equation}
+\frac{D\phi}{Dt}=0
+\end{equation}
+
+
+\begin{equation}
+\left(\frac{\partial\phi}{\partial r}\right)\frac{dr}{dt}+\left(\frac{\partial\phi}{\partial\theta}\right)\frac{d\theta}{dt}+\left(\frac{\partial\phi}{\partial z}\right)\frac{dz}{dt}+\left(\frac{\partial\phi}{\partial t}\right)=0
+\end{equation}
+
+
+\begin{equation}
+\left(\frac{\partial(h-r)}{\partial r}\right)\frac{dr}{dt}+\left(\frac{\partial(h-r)}{\partial\theta}\right)\frac{d\theta}{dt}+\left(\frac{\partial(h-r)}{\partial z}\right)\frac{dz}{dt}+\left(\frac{\partial(h-r)}{\partial t}\right)=0
+\end{equation}
+
+
+\begin{equation}
+\left(\frac{\partial h}{\partial r}\right)u_{r}-u_{r}+\frac{u_{\theta}}{r}\left(\frac{\partial h}{\partial\theta}\right)+u_{z}\left(\frac{\partial h}{\partial z}\right)+\left(\frac{\partial h}{\partial t}\right)-u_{r}=0
+\end{equation}
+
+
+\begin{equation}
+\left(\frac{\partial h}{\partial r}\right)u_{r}+\frac{u_{\theta}}{r}\left(\frac{\partial h}{\partial\theta}\right)+u_{z}\left(\frac{\partial h}{\partial z}\right)+\left(\frac{\partial h}{\partial t}\right)=2u_{r}
+\end{equation}
+
+
+rearranging,
+
+\begin{equation}
+\left(\frac{\partial h}{\partial t}\right)+u_{r}\left(\frac{\partial h}{\partial r}\right)+\frac{u_{\theta}}{r}\left(\frac{\partial h}{\partial\theta}\right)+u_{z}\left(\frac{\partial h}{\partial z}\right)=2u_{r}
+\end{equation}
+
+
+we note the following ,
+
+\begin{equation}
+h(z,\theta,t)=\overline{h}(z)+h'(z,\theta,t)
+\end{equation}
+
+
+\begin{equation}
+u_{r}(h,z,\theta,t)=\overline{U}_{r}(r)+u_{r}'(h,z,\theta,t)
+\end{equation}
+
+
+\begin{equation}
+u_{\theta}(h,z,\theta,t)=u'(h,z,\theta,t)
+\end{equation}
+(since the base flow is axisymmetric $\overline{U}_{\theta}=0$)
+
+\begin{equation}
+u_{z}(h,z,\theta,t)=\overline{U}_{z}(r)+u_{z}'(h,z,\theta,t)
+\end{equation}
+
+
+\begin{eqnarray*}
+\left(\frac{\partial h(z,\theta,t)}{\partial t}\right)+u_{r}(h,z,\theta,t)\left(\frac{\partial h(z,\theta,t)}{\partial r}\right)+
+\end{eqnarray*}
+
+
+\begin{equation}
+\frac{u_{\theta}(h,z,\theta,t)}{r}\left(\frac{\partial h(z,\theta,t)}{\partial\theta}\right)+u_{z}(\frac{u'_{\theta}}{r}\left(\frac{\partial h'}{\partial\theta}\right)h,z,\theta,t)\left(\frac{\partial(\overline{h}(z)+h'(z,\theta,t))}{\partial z}\right)=2(\overline{U_{r}}(r)+u_{r}'(h,z,\theta,t))
+\end{equation}
+
+
+\begin{eqnarray*}
+\left(\frac{\partial\overline{h}}{\partial t}\right)+\left(\frac{\partial h'}{\partial t}\right)+\overline{U}_{r}\left(\frac{\partial\overline{h}(z)}{\partial r}\right)+ & \overline{U}_{r}\left(\frac{\partial h'}{\partial r}\right)+u_{r}'\left(\frac{\partial\overline{h}(z)}{\partial r}\right) & +u_{r}'\left(\frac{\partial h'}{\partial r}\right)+\\
+\frac{u'_{\theta}}{r}\left(\frac{\partial\overline{h}}{\partial\theta}\right)+\frac{u'_{\theta}}{r}\left(\frac{\partial h'}{\partial\theta}\right)+ & \overline{U}_{z}\left(\frac{\partial\overline{h}}{\partial z}\right)+\overline{U}_{z}\left(\frac{\partial h'}{\partial z}\right) & +u_{z}'\left(\frac{\partial\overline{h}}{\partial z}\right)+u_{z}'\left(\frac{\partial h'}{\partial z}\right)\\
+=2(\overline{U_{r}}(r)+u_{r}'(h,z,\theta,t))
+\end{eqnarray*}
+
+
+since $\overline{h}$ is a function of z only,$\frac{\partial\overline{h}(z)}{\partial r}=\frac{\partial\overline{h}(z)}{\partial\theta}=0$
+and $\frac{\partial h'(z,\theta,t)}{\partial r}=0$. We have,
+
+\begin{eqnarray*}
+\left(\frac{\partial\overline{h}}{\partial t}\right)+\left(\frac{\partial h'}{\partial t}\right)+u_{r}'\left(\frac{\partial h'}{\partial r}\right)
+\end{eqnarray*}
+
+
+\begin{equation}
++\frac{u'_{\theta}}{r}\left(\frac{\partial h'}{\partial\theta}\right)+\overline{U}_{z}\left(\frac{\partial\overline{h}}{\partial z}\right)+\overline{U}_{z}\left(\frac{\partial h'}{\partial z}\right)+u_{z}'\left(\frac{\partial\overline{h}}{\partial z}\right)+u_{z}'\left(\frac{\partial h'}{\partial z}\right)=2(\overline{U_{r}}(r)+u_{r}'(h,z,\theta,t))
+\end{equation}
+
+
+Equation for the mean is given by
+\begin{equation}
+\left(\frac{\partial\overline{h}}{\partial t}\right)+\underbrace{\overline{U}_{r}\left(\frac{\partial\overline{h}(z)}{\partial r}\right)}+\overline{U}_{z}\left(\frac{d\overline{h}}{dz}\right)=2\overline{U}_{r}(r)
+\end{equation}
+
+
+or,
+
+\begin{equation}
+\left(\frac{\partial\overline{h}}{\partial t}\right)+\overline{U}_{z}\left(\frac{d\overline{h}}{dz}\right)=2\overline{U}_{r}(r)
+\end{equation}
+
+
+Subtracting the mean from the total flow, we get the perturbed equation
+of h:
+
+\begin{equation}
+\left(\frac{\partial h'}{\partial t}\right)+u_{r}'\left(\frac{\partial h'}{\partial r}\right)+\frac{u'_{\theta}}{r}\left(\frac{\partial h'}{\partial\theta}\right)+\overline{U}_{z}\left(\frac{\partial h'}{\partial z}\right)+u_{z}'\left(\frac{d\overline{h}}{dz}\right)+u_{z}'\left(\frac{\partial h'}{\partial z}\right)=2u_{r}'(h,z,\theta,t)
+\end{equation}
+
+
+assuming small perturbations, we neglect the product of small quantities
+to yield,
+
+\begin{equation}
+\left(\frac{\partial h'(z,\theta,t)}{\partial t}\right)+\overline{U}_{z}(r)\left(\frac{\partial h'(z,\theta,t)}{\partial z}\right)+\underbrace{u_{z}'(h,z,\theta,t)}\left(\frac{d\overline{h}(z)}{dz}\right)=2\underbrace{u_{r}'(h,z,\theta,t)}
+\end{equation}
+
+
+The above equation is nonlinear in h. We know that $h=\overline{h}(z)+h'(z,\theta,t)$
+
+To linearize eq(17) equation, we need to expand the terms in the curly
+braces using taylor series about $\overline{h}$.
+
+\begin{eqnarray*}
+u_{r}'(h,z,\theta,t)=u_{r}'(\overline{h}(z),z,\theta,t)+(h-\overline{h})\left(\frac{\partial u_{r}'}{\partial h}\right)_{(\overline{h},z,\theta,t)}
+\end{eqnarray*}
+
+
+\begin{equation}
++(z-z)\left(\frac{\partial u_{z}'}{\partial h}\right)_{(\overline{h},z,\theta,t)}+(\theta-\theta)\left(\frac{\partial u_{\theta}'}{\partial h}\right)_{(\overline{h},z,\theta,t)}+\left\{ O(h-\overline{h})^{2}\right\} +....
+\end{equation}
+
+
+Neglecting higher order terms,
+
+\begin{equation}
+u_{r}'(h,z,\theta,t)=u_{r}'(\overline{h}(z),z,\theta,t)+(h-\overline{h})\left(\frac{\partial u_{r}'}{\partial h}\right)_{(\overline{h},z,\theta,t)}
+\end{equation}
+
+
+but $h-\overline{h}=h'$ which is a function of $z,\theta,t$ .
+
+i.e., 
+
+\begin{equation}
+u_{r}'(h,z,\theta,t)=u_{r}'(\overline{h}(z),z,\theta,t)+h'(z,\theta,t)\left(\frac{\partial u_{r}'}{\partial h}\right)_{(\overline{h},z,\theta,t)}
+\end{equation}
+
+
+Similarly,
+
+\begin{equation}
+u_{z}'(h,z,\theta,t)=u_{z}'(\overline{h}(z),z,\theta,t)+h'(z,\theta,t)\left(\frac{\partial u_{z}'}{\partial h}\right)_{(\overline{h},z,\theta,t)}
+\end{equation}
+
+
+substituting eq (20) and eq(21) into eq(17)
+
+\begin{eqnarray*}
+\left(\frac{\partial h'(z,\theta,t)}{\partial t}\right) &  & +\overline{U}_{z}(r)\left(\frac{\partial h'(z,\theta,t)}{\partial z}\right)+
+\end{eqnarray*}
+
+
+\begin{eqnarray*}
+\left\{ u_{z}'(\overline{h}(z),z,\theta,t)+h'(z,\theta,t)\left(\frac{\partial u_{z}'}{\partial h}\right)_{(\overline{h},z,\theta,t)}\right\}  & \left(\frac{d\overline{h}(z)}{dz}\right) & =2\left\{ u_{r}'(\overline{h}(z),z,\theta,t)+h'(z,\theta,t)\left(\frac{\partial u_{r}'}{\partial h}\right)_{(\overline{h},z,\theta,t)}\right\} 
+\end{eqnarray*}
+
+
+\begin{equation}
+\frac{\partial h'}{\partial t}+\overline{U}_{z}(r)\left(\frac{\partial h'}{\partial z}\right)+u_{z}'\frac{d\overline{h}(z)}{dz}+h'\left(\frac{\partial u_{z}'}{\partial h}\right)_{(\overline{h},z,\theta,t)}\frac{d\overline{h}(z)}{dz}=2u_{r}'+2h'\left(\frac{\partial u_{r}'}{\partial h}\right)_{(\overline{h},z,\theta,t)}
+\end{equation}
+
+
+\begin{equation}
+\frac{\partial h'}{\partial t}+\overline{U}_{z}(r)\left(\frac{\partial h'}{\partial z}\right)+u_{z}'\frac{d\overline{h}(z)}{dz}+\underbrace{h'\left(\frac{\partial u_{z}'}{\partial h}\right)_{(\overline{h},z,\theta,t)}}\left(\frac{d\overline{h}(z)}{dz}\right)=2u_{r}'+2\underbrace{h'\left(\frac{\partial u_{r}'}{\partial h}\right)_{(\overline{h},z,\theta,t)}}
+\end{equation}
+
+
+We can further linearize the above equation assuming small perturbation,
+so that the terms in the curly brackets are ignored.
+
+\emph{Note: consider the term $\underbrace{h'\left(\frac{\partial u_{z}'}{\partial h}\right)_{(\overline{h},z,\theta,t)}}\left(\frac{d\overline{h}(z)}{dz}\right)$.
+Even though the term in the curly bracket is small , $\frac{d\overline{h}(z)}{dz}$
+need not be, }
+
+\emph{so that their product is finite.But we assume that $\frac{d\overline{h}(z)}{dz}$
+is bounded, hence the entire term can be neglected.}
+\begin{equation}
+\frac{\partial h'(z,\theta,t)}{\partial t}+\overline{U}_{z}(r)\left(\frac{\partial h'(z,\theta,t)}{\partial z}\right)+u_{z}'(\overline{h}(z),z,\theta,t)\left(\frac{d\overline{h}(z)}{dz}\right)=2u_{r}'(\overline{h}(z),z,\theta,t)
+\end{equation}
+
+
+The above equation is linear .
+\end{document}

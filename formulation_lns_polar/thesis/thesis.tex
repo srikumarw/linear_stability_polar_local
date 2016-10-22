@@ -1,0 +1,287 @@
+\documentclass[pdftex,12pt,a4paper,oneside]{report}
+
+%% Preamble here
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage[intoc]{nomencl}
+\usepackage{epstopdf}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[toc,page]{appendix}
+\usepackage{makeidx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{pdflscape}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage[export]{adjustbox}
+\usepackage{hyperref}
+\usepackage[all]{hypcap}
+\hypersetup{
+               colorlinks=true,
+               linkcolor=black,
+               citecolor=black,
+               linkbordercolor= {1 1 1}, 
+               citebordercolor= {1 1 1}, 
+               urlbordercolor = {1 1 1}
+           }
+
+
+%% This command is to scale big formula or figures
+%% Usage: \Scale[0.75]{formula or figure environment} 
+%% 0.75 is scaling factor
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
+
+\makeindex
+\makenomenclature
+\pagenumbering{roman}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\setlength{\parindent}{1cm}
+
+\lstset{
+  backgroundcolor=\color{white},
+  basicstyle=\footnotesize\ttfamily,
+  commentstyle=\color{mygray},
+  keywordstyle=\color{blue}
+}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%% include title %%%%%%%%%%%%%%%%%%
+\input{./title.tex}
+
+%%%%%%%%%%%%%%%%%% copyright section %%%%%%%%%%%%%%%%%%
+\section*{}
+\vspace*{\fill}
+\begin{center}
+
+\textbf{\copyright\ Anil Kumar Singh} \\[0.4cm]
+\textbf{JUNE 2015} \\[0.4cm]
+\textbf{All rights reserved} \\[0.4cm]
+
+\end{center}
+\vfill % equivalent to \vspace{\fill}
+\clearpage
+
+%%%%%%%%%%%%%%%%%% dedication section %%%%%%%%%%%%%%%%%%
+\section*{}
+
+\vspace*{\fill}
+\begin{center}
+
+\textsc{TO}\\[1.0cm]
+\textit{My parents}\\[1.0cm]
+\textit{and}\\[1.0cm]
+\textit{The Almighty}
+
+\end{center}
+\vfill % equivalent to \vspace{\fill}
+\clearpage
+
+%%%%%%%%%%%%%%%%%% Acknowledgements %%%%%%%%%%%%%%%%%%
+\chapter*{\huge Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+
+\hspace{1cm} I express my sincere thanks to my advisor Dr. Santosh Hemachandra for his able guidance and support throughout the year, 
+for insightful discussions about fluid dynamics and for his motivation speeches. I thank him for introducing me
+to the interesting world of computational fluid dynamics and giving me all freedom to explore his CFD code. 
+I am thankful to Dr. Arnab Samanta who introduced me to hydrodynamic stability, the concepts learned in his course
+have been used in this thesis. I would like to thank my senior labmate Kiran Manohar who helped me during formulation
+of a generic biglobal code and generously provided his stability code against which I have validated mine. I would like
+to thank Kiran Sateesh who gave many of his CFD scripts and  spent countless hours with me looking for bugs in my CFD scripts.
+
+I would like to thank Joel for fruitful discussions about stability and CFD. He like myself is a true software enthusiast. 
+He helped me understand fdqm approach to solving biglobal stability problems. I would like to thank Velayutham who pointed 
+out various tricks and tips to improve my codes' efficiency. He also helped me with many of CFD concepts. I would like to
+thank my friend Vinod for going through my formulation and code to eliminate bugs. Loads of thanks to Kapil, Vinod, Neha and Pooja for bringing in moments of fun amidst busy work schedule.
+\newpage
+
+%%%%%%%%%%%%%%%%%% Vita %%%%%%%%%%%%%%%%%%
+%\chapter*{\huge Vita}
+%\addcontentsline{toc}{chapter}{Vita}
+%Thanks Mum.
+%\newpage
+
+%%%%%%%%%%%%%%%%%% Abstract %%%%%%%%%%%%%%%%%%
+\chapter*{\huge Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+
+\hspace{1.00cm}Global stability analysis is required for characterizing stability features of non parallel flows which 
+are commonly occurring in nature. This project aims at developing a generic biglobal stability code for doing hydrodynamic stability analysis of two dimensional
+baseflows in low mach number limit.  Governing equations of fluid flow in low mach number limit have been
+derived using theory of asymptotic analysis and these equations are linearized to obtain biglobal stability
+equations. Temporal stability calculations have been done for jet like flows represented theoretically by tanh 
+velocity profile. The unstable eigenmodes of the baseflow have been accurately captured and compared against the
+eigenmodes obtained from local analysis. Stability analysis of tanh velocity profile with added swirl has also been
+done to make the $\pm n$ modes non-degenerate and facilitate comparison with local analysis. 
+Temporal stability analysis for rectangular channel flow for varying aspect ratios of duct has been done and a comparison with plane poiseuille flow eigenspectrum has been done.
+CFD simulation of a Re 11000 air jet has been done and stability characteristics are required to be validated against
+theoretical predictions by biglobal stability analysis. The jet has been forced with axisymmetric most unstable
+eigenmode corresponding to inlet velocity profile to break it up to turbulent flow regime. Temporal eigenvalue calculation on averaged baseflow is done at a location where roll up starts for various streamwise wavenumber.
+\newpage
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\newpage
+%%%%%%%%%%%%%%%%%% Keywords %%%%%%%%%%%%%%%%%%
+\chapter*{\huge Keywords}
+\addcontentsline{toc}{chapter}{Keywords}
+Spectral methods, Chebyshev nodes, Local stability analysis, Global stability analysis, Computational fluid dynamics, Direct Numerical Simulations
+\newpage
+
+
+%%%%%%%%%%%%%%%%%% Notation and Abbreviations %%%%%%%%%%%%%%%%%%
+%\chapter*{\huge Notation and Abbreviations}
+%No notation is used in this document. No abbreviations have been used either.
+\renewcommand{\nomname}{Notations and  Abbreviations}
+\nomenclature{CFD}{Computation fluid dynamics}
+\nomenclature{$\mu$}{Dynamic Viscosity}
+\nomenclature{$\nu$}{Kinematic Viscosity}
+\nomenclature{$Re$}{Reynolds number}
+\nomenclature{$Pr$}{Prandtl number}
+\nomenclature{$c_p$}{Specific heat at constant pressure}
+\nomenclature{$c_v$}{Specific heat at constant volume}
+\nomenclature{$d$}{Diameter of the jet}
+\nomenclature{$U_{jet}$}{Jet's centerline velocity at inlet}
+\nomenclature{PPF}{Plane poiseulle flow}
+\nomenclature{DNS}{Direct Numerical Simulation}
+
+
+\printnomenclature[5em]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% New chapter starts here %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introduction}
+\hspace{1.00cm} Hydrodynamic instability is commonly occurring phenomena in fluid flows. Flows of practical importance like boundary layers,
+shear layers and flows in combustors need to studied for hydrodynamically driven instability to account for control strategies.
+Fluid flows can either be convectively unstable or absolutely unstable. Stability behaviour can be determined by perturbing the base state of
+the flow and monitoring the evolution of perturbation in space and time. If a small perturbation in the base flow state
+grows upstream and downstream flow is said to be absolutely unstable. Otherwise, if perturbation grows but is convected 
+away from point of origin then the flow is said to be convectively unstable \cite{huerre90}. Local and global stabilities refer to 
+stability of the local velocity profile and entire flow field respectively. Most of the work in stability literature makes the parallel flow assumption
+which does not vary in space. While in practice flows are spatially evolving and the local stability analysis is not suitable to characterize
+their stability behaviour. For spatially developing flows global stability analysis is required to be done. Techniques such as WKBJ can be used 
+to analyse weakly non-parallel flows and construct the global stability map of the flow from the local analysis, but for flows showing large spatial
+variation global stability analysis is a necessity.
+
+Biglobal stability analysis goes one step ahead of local analysis and assumes base flows to be varying in two spatial directions. Hence it can be used
+to analyse many spatially varying two dimensional open and closed baseflows like jets, shear layers, channel flows and flows in combustors. This project deals with 
+developing a generic biglobal code which can do biglobal stability computations in any domain of simply connected nature. 
+
+Biglobal stability matrices are huge
+in size even for nominal number of discrete points along each spatial coordinate hence full eigenvalue computation is avoided and algorithms like arnoldi are used
+to pick fewer eigenvalues of interest. PETSc and SLEPc are scientific libraries built over BLAS and LAPACK fortran routines and have support for many external packages like MUMPS, HDF5 and ARPACK. Hence these libraries are chosen to develop the stability code. Further chebyshev spectral methods are used to solve the numerical dispersion relation owing the higher accuracy of
+spectral methods for fewer number of mesh points.
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% New chapter starts here %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Formulation}
+
+
+
+\begin{appendices}
+
+
+\chapter{Governing Equations of Fluid Flow}
+
+\chapter{Governing Equations of Fluid Flow in Low Mach Number Limit}
+
+\lstinputlisting[language=C]{codes/channel.c}
+
+\end{appendices}
+
+\renewcommand{\bibname}{References}
+\begin{thebibliography}{56}
+
+\bibitem{huerre90}
+Patrick Huerre, Peter Monkewitz,
+\emph{Local and Global instabilities in spatially developing flows},
+J. Fluid Mech. 1990
+
+
+\bibitem{canuto06}
+Canuto C., Hussaini M.Y., Quarteroni A., Zang T.A.
+\emph{Spectral Methods},
+Springer-Verlag Berlin Heidelberg,
+1st edition,
+2006
+
+\bibitem{thomas95}
+Thomas J. W.
+\emph{Numerical Partial Differential Equations: finite difference methods},
+Springer-Verlag New York, Inc.
+1st edition,
+1995
+
+\bibitem{tatsumi90}
+Tomomasa Tatsumi, Takahiro Yoshimura, 
+\emph{Stability of the laminar flow in a rectangular duct},
+J. Fluid Mech., 1990 pp.437-449
+
+\bibitem{rosenhead63}
+Rosenhead L.,
+\emph{Laminar Boundary Layers},
+Oxford University Press, 1963
+
+\bibitem{theofilis12}
+Pedro Paredes, Miguel Hermanns, Soledad Le Clainche, Vassilis Theofilis,
+\emph{Order $10^4$ speedup in global linear instability analysis using matrix formation},
+Comput. Methods Appl. Mech. Engrg.,
+Elsevier 2012
+
+\bibitem{theofilis04}
+Theofilis V., Duck P. W., Owen J.,
+\emph{Viscous linear stability analysis of rectangular duct and cavity flows}
+J. Fluid Mech. (2004), vol. 505, pp.249-286,
+\copyright\ 2004 Cambrige University Press
+
+\bibitem{petscmanual}
+Satish Balay, Shrirang Abhyankar, Mark F. Adams, Jed Brown, Peter Brune,
+Kris Buschelman, Lisandro Dalcin, Victor Eijkhout,  William~D. Gropp,
+Dinesh Kaushik, Matthew G. Knepley, Lois Curfman McInnes, Karl Rupp, Barry F. Smith,
+Stefano Zampini and Hong Zhang,
+\emph{PETSc Users Manual},
+Argonne National Laboratory, 
+2015
+
+\bibitem{slepcmanual}
+Hernandez V., Roman J. E., Vidal V.,
+\emph{SLEPc: A scalable and flexible toolkit for the solution of eigenvalue problems},
+ACM Trans. Math. Software, 31(3):351-362,
+2005
+
+\bibitem{panchapakesan93}
+Panchapakesan N. R., Lumley J. L.,
+\emph{Turbulence measurements in axisymmetric jets of air and helium. Part1. Air jet},
+J. Fluid Mech. (1993), vol. 246, pp. 197-223,
+Copyright \copyright\ 1993 Cambridge University Press
+
+\bibitem{batchelor62}
+Batchelor G. K., Gill A. E.,
+\emph{Analysis of the stability of axisymmetric jets},
+Department of Applied Mathematics and Theoretical Physics,
+University of Cambridge, 1962
+
+\end{thebibliography}
+%\lstinputlisting[language=Matlab]{/home/nebula/visualise_baseflow.m}
+\printindex
+
+\end{document}

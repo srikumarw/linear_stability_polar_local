@@ -1,0 +1,609 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Linearization of the stress boundary conditions:
+\end_layout
+
+\begin_layout Standard
+1.
+ Tangential stress balance equation is given by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+{\bf n}\cdot\tau\cdot{\bf t}=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+the unit tangent vector 
+\begin_inset Formula ${\bf t}$
+\end_inset
+
+ has two components 
+\begin_inset Formula $t_{z},t_{\theta}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+{\bf t_{\theta}=}\left[\frac{1}{r}\frac{\partial h}{\partial\theta},1,0\right]\left(\frac{1}{\sqrt{1+\left(\frac{1}{r}\frac{\partial h}{\partial\theta}\right)^{2}}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left[t_{1},t_{2},t_{3}\right]=\left[\frac{1}{r}\frac{\partial h}{\partial\theta},1,0\right]\left(\frac{1}{\sqrt{1+\left(\frac{1}{r}\frac{\partial h}{\partial\theta}\right)^{2}}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+{\bf t_{z}=}\left[\frac{\partial h}{\partial z},0,1\right]\left(\frac{1}{\sqrt{1+\left(\frac{\partial h}{\partial z}\right)^{2}}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left[t_{1},t_{2},t_{3}\right]=\left[\frac{\partial h}{\partial z},0,1\right]\left(\frac{1}{\sqrt{1+\left(\frac{\partial h}{\partial z}\right)^{2}}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+consider the term 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $1+\left(\frac{\partial h}{\partial z}\right)^{2}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial h}{\partial z}=\frac{d\overline{h}(z)}{dz}+\frac{\partial h'(z,\theta,t)}{\partial z}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1+\left(\frac{\partial h}{\partial z}\right)^{2}=1+\left(\frac{d\overline{h}(z)}{dz}\right)^{2}+\left(\frac{\partial h'(z,\theta,t)}{\partial z}\right)^{2}+2\left(\frac{d\overline{h}(z)}{dz}\right)\left(\frac{\partial h'(z,\theta,t)}{\partial z}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+linearizing the above expression,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1+\left(\frac{\partial h}{\partial z}\right)^{2}=1+\left(\frac{d\overline{h}(z)}{dz}\right)^{2}+2\left(\frac{d\overline{h}(z)}{dz}\right)\left(\frac{\partial h'(z,\theta,t)}{\partial z}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and the term 
+\begin_inset Formula $\frac{1}{r}\frac{\partial h}{\partial\theta}$
+\end_inset
+
+ becomes 
+\begin_inset Formula $\frac{1}{r}\frac{\partial h'(z,\theta,t)}{\partial\theta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{t_{z}}=\left[t_{1},t_{2},t_{3}\right]=\left[\left(\frac{d\overline{h}(z)}{dz}+\frac{\partial h'(z,\theta,t)}{\partial z}\right),0,1\right]\left(\frac{1}{\sqrt{1+\left(\frac{d\overline{h}(z)}{dz}\right)^{2}+2\left(\frac{d\overline{h}(z)}{dz}\right)\left(\frac{\partial h'(z,\theta,t)}{\partial z}\right)}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+{\bf t_{\theta}=}\left[\frac{1}{r}\frac{\partial h'(z,\theta,t)}{\partial\theta},1,0\right]\left(\frac{1}{\sqrt{1+\left(\frac{1}{r}\frac{\partial h'(z,\theta,t)}{\partial\theta}\right)^{2}}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+the unit normal to the surface is ,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+{\bf n}=\left[-\frac{\partial h}{\partial z},\frac{-1}{r}\frac{\partial h}{\partial\theta},1\right]\frac{1}{\sqrt{\left(\frac{\partial h}{\partial z}\right)^{2}+\left(\frac{1}{r}\frac{\partial h}{\partial\theta}\right)^{2}+1}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Linearizing results in,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+{\bf n}= &  & \left[-\left(\frac{d\overline{h}(z)}{dz}+\frac{\partial h'(z,\theta,t)}{\partial z}\right),\frac{-1}{r}\frac{\partial h'(z,\theta,t)}{\partial\theta},1\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(\frac{1}{\sqrt{1+\left(\frac{d\overline{h}(z)}{dz}\right)^{2}+2\left(\frac{d\overline{h}(z)}{dz}\right)\left(\frac{\partial h'(z,\theta,t)}{\partial z}\right)+\left(\frac{1}{r}\frac{\partial h'(z,\theta,t)}{\partial\theta}\right)^{2}}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+we need to linearize the terms in the stress tensor.
+\end_layout
+
+\begin_layout Standard
+we note that at the interface, the velocities 
+\begin_inset Formula $u_{r}$
+\end_inset
+
+ ,
+\begin_inset Formula $u_{\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{z}$
+\end_inset
+
+ is a function of 
+\begin_inset Formula $h(z,\theta,t),z,\theta,t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u_{\theta}(h,z,\theta,t)=u_{\theta}'(\overline{h},z,\theta,t)+h'\left(\frac{\partial u_{\theta}'}{\partial h}\right)_{(\overline{h},z,\theta,t)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u_{\theta}(h,z,\theta,t)=u_{\theta}'(\overline{h},z,\theta,t)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u_{r}=\overline{U}_{r}+u_{r}'(\overline{h}(z),z,\theta,t)+h'\left(\frac{\partial u_{r}'}{\partial h}\right)_{(\overline{h},z,\theta,t)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u_{r}=\overline{U}_{r}+u_{r}'(\overline{h}(z),z,\theta,t)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u_{z}'(h,z,\theta,t)=u_{z}'(\overline{h}(z),z,\theta,t)+h'(z,\theta,t)\left(\frac{\partial u_{z}'}{\partial h}\right)_{(\overline{h},z,\theta,t)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u_{z}'(h,z,\theta,t)=u_{z}'(\overline{h}(z),z,\theta,t)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tau_{11}=-p+2\mu\frac{\partial u_{r}}{\partial r}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tau_{11}=-p+2\mu\frac{d\overline{U}_{r}}{dr}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tau_{12}=\tau_{21}=\mu\left(\frac{1}{r}\frac{\partial u_{r}}{\partial\theta}-\frac{u_{\theta}}{r}+\frac{\partial u_{\theta}}{\partial r}\right)=\mu\left(\frac{1}{r}\frac{\partial u_{r}}{\partial\theta}-\frac{u_{\theta}}{r}\right)=\mu\left(\frac{1}{r}\frac{\partial u'_{r}}{\partial\theta}-\frac{u'_{\theta}}{r}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tau_{13}=\tau_{31}=\mu\left(\frac{\partial u_{z}}{\partial r}+\frac{\partial u_{r}}{\partial z}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tau_{13}=\tau_{31}=\mu\left(\frac{d\overline{U}_{z}}{dr}+\frac{\partial u_{r}'}{\partial z}\right)\left(\frac{1}{\sqrt{1+\left(\frac{d\overline{h}(z)}{dz}\right)^{2}+2\left(\frac{d\overline{h}(z)}{dz}\right)\left(\frac{\partial h'(z,\theta,t)}{\partial z}\right)+\left(\frac{1}{r}\frac{\partial h'(z,\theta,t)}{\partial\theta}\right)^{2}}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tau_{23}=\tau_{32}=\mu\left(\frac{1}{r}\frac{\partial u_{z}}{\partial\theta}+\frac{\partial u_{\theta}}{\partial z}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tau_{23}=\tau_{32}=\mu\left(\frac{1}{r}\frac{\partial u_{z}'}{\partial\theta}+\frac{\partial u_{\theta}'}{\partial z}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tau_{22}=-p+2\mu\left(\frac{u_{r}}{r}+\frac{1}{r}\frac{\partial u_{\theta}}{\partial\theta}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tau_{22}=-p+2\mu\left(\frac{\overline{U}_{r}+u_{r}'}{r}+\frac{1}{r}\frac{\partial u_{\theta}'}{\partial\theta}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tau_{33}=-p+2\mu\left(\frac{\partial u_{z}}{\partial z}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\tau_{33}=-p+2\mu\left(\frac{\partial u_{z}'}{\partial z}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+consider the equation 
+\begin_inset Formula ${\bf n}\cdot\tau\cdot{\bf t_{z}}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+n_{1}(\tau_{11}t_{1}+\tau_{12}t_{2}+\tau_{13}t_{3})+n_{2}(\tau_{21}t_{1}+\tau_{22}t_{2}+\tau_{23}t_{3})+n_{3}(\tau_{31}t_{1}+\tau_{32}t_{2}+\tau_{33}t_{3})=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+we know the values of 
+\begin_inset Formula $n_{1},n_{2},n_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+n_{1}= & -\left(\frac{1}{\sqrt{1+\left(\frac{d\overline{h}(z)}{dz}\right)^{2}+2\left(\frac{d\overline{h}(z)}{dz}\right)\left(\frac{\partial h'(z,\theta,t)}{\partial z}\right)+\left(\frac{1}{r}\frac{\partial h'(z,\theta,t)}{\partial\theta}\right)^{2}}}\right)\left(\frac{d\overline{h}(z)}{dz}+\frac{\partial h'(z,\theta,t)}{\partial z}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+n_{2}= & \left(\frac{1}{\sqrt{1+\left(\frac{d\overline{h}(z)}{dz}\right)^{2}+2\left(\frac{d\overline{h}(z)}{dz}\right)\left(\frac{\partial h'(z,\theta,t)}{\partial z}\right)+\left(\frac{1}{r}\frac{\partial h'(z,\theta,t)}{\partial\theta}\right)^{2}}}\right) & \left(\frac{-1}{r}\frac{\partial h'(z,\theta,t)}{\partial\theta}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+n_{3}= & \frac{1}{\sqrt{1+\left(\frac{d\overline{h}(z)}{dz}\right)^{2}+2\left(\frac{d\overline{h}(z)}{dz}\right)\left(\frac{\partial h'(z,\theta,t)}{\partial z}\right)+\left(\frac{1}{r}\frac{\partial h'(z,\theta,t)}{\partial\theta}\right)^{2}}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+the values of 
+\begin_inset Formula $t_{1},t_{2},t_{3}$
+\end_inset
+
+are ,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+t_{1}= & \left(\frac{1}{\sqrt{1+\left(\frac{d\overline{h}(z)}{dz}\right)^{2}+2\left(\frac{d\overline{h}(z)}{dz}\right)\left(\frac{\partial h'(z,\theta,t)}{\partial z}\right)}}\right) & \left(\frac{d\overline{h}(z)}{dz}+\frac{\partial h'(z,\theta,t)}{\partial z}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+t_{2}=0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+t_{3}= & \frac{1}{\sqrt{1+\left(\frac{d\overline{h}(z)}{dz}\right)^{2}+2\left(\frac{d\overline{h}(z)}{dz}\right)\left(\frac{\partial h'(z,\theta,t)}{\partial z}\right)}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+n_{1}(\tau_{11}t_{1}+\tau_{12}t_{2}+\tau_{13}t_{3})+n_{2}(\tau_{21}t_{1}+\tau_{22}t_{2}+\tau_{23}t_{3})+n_{3}(\tau_{31}t_{1}+\tau_{32}t_{2}+\tau_{33}t_{3})= & n_{1}(\tau_{11}t_{1}+\tau_{13}t_{3}) & +
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+n_{2}(\tau_{21}t_{1}+\tau_{23}t_{3})+n_{3}(\tau_{31}t_{1}+\tau_{33}t_{3})
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+n_{1}(\tau_{11}t_{1}+\tau_{13}t_{3})= & -\left(\frac{1}{\sqrt{1+\left(\frac{d\overline{h}(z)}{dz}\right)^{2}+2\left(\frac{d\overline{h}(z)}{dz}\right)\left(\frac{\partial h'(z,\theta,t)}{\partial z}\right)+\left(\frac{1}{r}\frac{\partial h'(z,\theta,t)}{\partial\theta}\right)^{2}}}\right)\left(\frac{d\overline{h}(z)}{dz}+\frac{\partial h'(z,\theta,t)}{\partial z}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

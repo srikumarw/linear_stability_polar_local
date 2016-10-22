@@ -1,0 +1,9 @@
+Comments you need to address 
+
+eq. 35 The RHS should be (dr/dt)_r=h(z,\theta,t) = u_r(h(z,\theta,t),z,\theta,t)
+
+eq. 35-43, It appears you’ve assumed U_interface = const. From the above comment, it is clear that this is not the case. 
+
+Hence section 3.1 needs to be worked out again to address the above inconsistencies.
+
+---------------------------------------------------------XXXXXX----------------------------------------------------------------------------
